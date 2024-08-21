@@ -15,12 +15,10 @@ phases:
     commands:
       - echo Build completed successfully.
       - echo Zipping the build directory...
-      - zip -r build.zip build
-      - echo Zipped build directory successfully.
 
 artifacts:
   files:
-    - build.zip
+    - '**/*'
 
 cache:
   paths:
