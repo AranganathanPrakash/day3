@@ -14,13 +14,15 @@ phases:
   post_build:
     commands:
       - echo Build completed successfully.
-      - echo Packaging and uploading files to S3...
+      - echo Zipping the build directory...
+      - zip -r build.zip build
+      - echo Zipped build directory successfully.
 
 artifacts:
   files:
-    - '**/*'
-  base-directory: build
+    - build.zip
 
 cache:
   paths:
     - 'node_modules/**/*'
+
