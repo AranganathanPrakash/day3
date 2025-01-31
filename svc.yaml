@@ -5,7 +5,6 @@ kind: Service
 metadata:
   labels:
     app: test
-    name: test
 spec:
   ports:
   - name: http
